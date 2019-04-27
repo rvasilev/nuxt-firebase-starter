@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-firebase",
+  "version": "1.0.0",
+  "description": "Nust.js deploy ready for firebase functions and host",
+  "author": "Luca Pulira <luca.pulira@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.4",
+    "firebase": "^5.10.1",
+    "firebase-admin": "^7.3.0",
+    "firebase-functions": "^2.3.0",
+    "firebase-tools": "^6.7.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0"
+  },
+  "engines": {
+    "node": "8"
+  }
+}
