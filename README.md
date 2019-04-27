@@ -39,3 +39,14 @@ or
 
 $ npm init nuxt-app <my-project>
 ```
+
+### Setup firebase env
+
+```
+firebase functions:config:set environment.apikey=""
+firebase functions:config:set environment.authdomain=""
+firebase functions:config:set environment.databaseurl=""
+firebase functions:config:set environment.projectid=""
+firebase functions:config:set environment.storagebucket=""
+firebase functions:config:set environment.messagingsenderid=""
+```
