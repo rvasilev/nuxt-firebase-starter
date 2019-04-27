@@ -1,3 +1,5 @@
+import packageData from './package.json'
+
 module.exports = {
   srcDir: 'app/',
   /*
@@ -19,6 +21,16 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   /*
+  ** Modules
+  */
+  modules: [
+    '@nuxtjs/style-resources'
+  ],
+  styleResources: {
+    scss: [],
+    less: []
+  },
+  /*
   ** Build configuration
   */
   env: {
@@ -27,7 +39,8 @@ module.exports = {
     DATABASEURL: process.env.DATABASEURL,
     PROJECTID: process.env.PROJECTID,
     STORAGEBUCKET: process.env.STORAGEBUCKET,
-    MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
+    MESSAGINGSENDERID: process.env.MESSAGINGSENDERID,
+    VERSION: packageData.version
   },
   build: {
     /*

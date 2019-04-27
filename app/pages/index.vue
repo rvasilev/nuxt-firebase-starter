@@ -8,6 +8,9 @@
       <h2 class="subtitle">
         Nust.js deploy ready for firebase functions and host
       </h2>
+      <p>
+        {{project}}
+      </p>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -26,6 +29,22 @@
 import AppLogo from '~/components/AppLogo.vue'
 
 export default {
+  data () {
+    return {
+      project: 'default'
+    }
+  },
+  asyncData (context) {
+    const req = context.req
+    const source = process.server ? 'server' : 'client'
+    const projectId = context.env.PROJECTID || ''
+    const version = context.env.VERSION || ''
+    const fromServer = req ? req.headers.host : ''
+    const message = `nuxt from ${source} ${projectId} - v${version} - ${fromServer}`
+    return {
+      project: message
+    }
+  },
   components: {
     AppLogo
   }

@@ -50,3 +50,11 @@ firebase functions:config:set environment.projectid=""
 firebase functions:config:set environment.storagebucket=""
 firebase functions:config:set environment.messagingsenderid=""
 ```
+
+## Add useful libs
+
+#### @nuxtjs/style-resources
+add sass less styl preprocessor 
+```
+$ npm i -D @nuxtjs/style-resources sass-loader node-sass
+```
