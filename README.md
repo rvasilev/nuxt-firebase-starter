@@ -195,3 +195,14 @@ replace firebase.json with
 
 ```
 it map all request to be served by function called ssr 
+
+#### Deploy to firebase
+```
+$ npm run build
+$ npm run deploy:firebase
+```
+
+if you want to test locally
+```
+$ firebase serve 
+```
