@@ -1,6 +1,6 @@
 {
   "name": "nuxt-firebase",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Nust.js deploy ready for firebase functions and host",
   "author": "Luca Pulira <luca.pulira@gmail.com>",
   "private": true,
