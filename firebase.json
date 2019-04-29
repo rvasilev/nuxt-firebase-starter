@@ -10,9 +10,12 @@
         "source": "**",
         "function": "ssr"
       }
-    ]
+    ],
+    "cleanUrls": true,
+    "trailingSlash": true
   },
   "functions": {
     "source": "dist/server"
-  }
+  },
+  "appAssociation": "AUTO"
 }

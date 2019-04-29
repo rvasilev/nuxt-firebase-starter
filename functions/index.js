@@ -3,12 +3,17 @@ const { Nuxt } = require('nuxt')
 const express = require('express')
 const app = express()
 
+console.log('api')
+const api = require('./api/index')
+
 const envs = functions.config().environment
 
-Object.entries(envs).forEach((k, v) => {
-  console.log(k)
-  process.env[`${k}`.toUpperCase()] = v
-})
+if(envs) {
+  Object.entries(envs).forEach((k, v) => {
+    console.log(k)
+    process.env[`${k}`.toUpperCase()] = v
+  })
+}
 
 const config = {
   dev: false,
@@ -27,6 +32,10 @@ function handleRequest(req, res) {
     })
   })
 }
-
+app.use(api.path, api.handler)
 app.use(handleRequest)
-exports.ssr = functions.https.onRequest(app)
+
+
+module.exports = {
+  ssr: functions.https.onRequest(app)
+}

@@ -24,6 +24,7 @@ module.exports = {
   ** Modules
   */
   modules: [
+    '@nuxtjs/axios',
     '@nuxtjs/style-resources'
   ],
   styleResources: {
@@ -47,7 +48,9 @@ module.exports = {
     ** Run ESLint on save
     */
     publicPath: '/assets/',
-    extend (config, { isDev, isClient }) {
+
+    extend (config, { isDev, isClient, isServer }) {
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -56,7 +59,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      if(isServer) {
+      }
     }
-  }
+  },
+  serverMiddleware: [
+    // API middleware
+    './server/api/index'
+  ]
 }
 
