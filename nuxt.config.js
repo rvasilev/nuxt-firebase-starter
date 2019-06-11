@@ -58,6 +58,22 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        const vueConfig = config.module.rules.find((r) => r.loader === 'vue-loader')
+        if(vueConfig) {
+          const currentOptions = Object.assign({}, vueConfig.options)
+          vueConfig.use = [
+            {
+              loader: "vue-loader",
+              options: currentOptions
+            },
+            {
+              loader: "vue-svg-inline-loader",
+              options: { /* ... */}
+            }
+          ]
+          delete vueConfig.loader
+          delete vueConfig.options
+        }
       }
       if(isServer) {
       }

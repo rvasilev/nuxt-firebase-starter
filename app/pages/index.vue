@@ -13,11 +13,11 @@
       </p>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://github.com/lp741com/nuxt-firebase-starter/blob/master/README.md"
           target="_blank"
           class="button--green">Documentation</a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/lp741com/nuxt-firebase-starter"
           target="_blank"
           class="button--grey">GitHub</a>
       </div>

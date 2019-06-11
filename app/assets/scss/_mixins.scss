@@ -1,0 +1,21 @@
+@mixin gridTemplates($grid-columns) {
+  $grid-sections: $grid-columns - 2;
+  @for $i from 1 through $grid-columns {
+    .grid-#{$i} {
+      display: grid;
+      grid-template-columns: repeat($grid-columns, 1fr);
+    }
+    $grid-temp: $grid-sections;
+    $grid-temp-min: 2;
+    $grid-temp-max: $grid-temp - 1;
+    @while $grid-temp > 0 and $grid-temp-max > 1 {
+      .grid-#{$i}--centered-#{$grid-temp} {
+        grid-column: #{$grid-temp-min} / #{$grid-temp-max};
+        grid-row: auto;
+      }
+      $grid-temp: $grid-temp - 2;
+      $grid-temp-min: $grid-temp-min + 1;
+      $grid-temp-max: $grid-temp-max - 1;
+    }
+  }
+}

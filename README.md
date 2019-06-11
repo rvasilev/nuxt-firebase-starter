@@ -52,6 +52,46 @@ add sass less styl preprocessor
 $ npm i -D @nuxtjs/style-resources sass-loader node-sass
 ```
 
+#### @storybook/vue [read more ...](https://storybook.js.org/docs/guides/guide-vue/)
+
+advanced UI component development
+
+```
+$ npm install @storybook/vue --save-dev
+```
+
+#### lodash [read more...](https://lodash.com/)
+
+useful tool library
+
+```
+$ npm install lodash
+```    
+
+#### vue-wait [read more...](https://github.com/f/vue-wait)
+
+indipendent waiting state library, supports vuex
+
+```
+$ npm install vue-wait
+```
+
+#### vue-element-loading [read more...](https://github.com/biigpongsatorn/vue-element-loading)
+
+loading UI component full screen or container relative
+
+```
+$ npm install vue-element-loading
+``` 
+
+#### vue-svg-inline-loader [read more...](https://github.com/oliverfindl/vue-svg-inline-loader#readme)
+
+load svg files inline just by add a property to img tag
+
+```
+$ npm install vue-svg-inline-loader --dev
+```
+
 ## Firebase Setup
 
 create firebase project and copy project id
@@ -206,3 +246,10 @@ if you want to test locally
 ```
 $ firebase serve 
 ```
+
+## Roadmap
+1. Storybook to test UI components
+2. Storyblok sdk wysiwyg CMS (free version)
+3. UI Tests
+4. TDD Express API
+5. CI/CD automation
